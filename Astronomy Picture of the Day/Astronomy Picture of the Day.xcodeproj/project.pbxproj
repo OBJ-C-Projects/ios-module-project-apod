@@ -13,6 +13,8 @@
 		04EE8BCD24868EAB00E683D7 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 04EE8BCB24868EAB00E683D7 /* Main.storyboard */; };
 		04EE8BCF24868EAF00E683D7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 04EE8BCE24868EAF00E683D7 /* Assets.xcassets */; };
 		04EE8BD224868EAF00E683D7 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 04EE8BD024868EAF00E683D7 /* LaunchScreen.storyboard */; };
+		04EE8BDD2486AD3500E683D7 /* AstronomyCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04EE8BDC2486AD3400E683D7 /* AstronomyCollectionViewController.swift */; };
+		04EE8BDF2486AD5E00E683D7 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04EE8BDE2486AD5E00E683D7 /* DetailViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +26,8 @@
 		04EE8BCE24868EAF00E683D7 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		04EE8BD124868EAF00E683D7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		04EE8BD324868EAF00E683D7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		04EE8BDC2486AD3400E683D7 /* AstronomyCollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AstronomyCollectionViewController.swift; sourceTree = "<group>"; };
+		04EE8BDE2486AD5E00E683D7 /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -67,6 +71,8 @@
 			isa = PBXGroup;
 			children = (
 				04EE8BC924868EAB00E683D7 /* ViewController.swift */,
+				04EE8BDC2486AD3400E683D7 /* AstronomyCollectionViewController.swift */,
+				04EE8BDE2486AD5E00E683D7 /* DetailViewController.swift */,
 			);
 			path = "View Controller";
 			sourceTree = "<group>";
@@ -163,6 +169,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				04EE8BCA24868EAB00E683D7 /* ViewController.swift in Sources */,
+				04EE8BDD2486AD3500E683D7 /* AstronomyCollectionViewController.swift in Sources */,
+				04EE8BDF2486AD5E00E683D7 /* DetailViewController.swift in Sources */,
 				04EE8BC624868EAB00E683D7 /* AppDelegate.swift in Sources */,
 				04EE8BC824868EAB00E683D7 /* SceneDelegate.swift in Sources */,
 			);
