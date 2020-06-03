@@ -15,6 +15,9 @@
 		04EE8BD224868EAF00E683D7 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 04EE8BD024868EAF00E683D7 /* LaunchScreen.storyboard */; };
 		04EE8BDD2486AD3500E683D7 /* AstronomyCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04EE8BDC2486AD3400E683D7 /* AstronomyCollectionViewController.swift */; };
 		04EE8BDF2486AD5E00E683D7 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04EE8BDE2486AD5E00E683D7 /* DetailViewController.swift */; };
+		04EE8BE1248765D100E683D7 /* PhotoCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04EE8BE0248765D100E683D7 /* PhotoCollectionViewCell.swift */; };
+		04EE8BE52487673500E683D7 /* FGTPhoto.m in Sources */ = {isa = PBXBuildFile; fileRef = 04EE8BE42487673500E683D7 /* FGTPhoto.m */; };
+		04EE8BE924877A5100E683D7 /* FGTNetworkFetch.m in Sources */ = {isa = PBXBuildFile; fileRef = 04EE8BE824877A5100E683D7 /* FGTNetworkFetch.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +31,12 @@
 		04EE8BD324868EAF00E683D7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		04EE8BDC2486AD3400E683D7 /* AstronomyCollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AstronomyCollectionViewController.swift; sourceTree = "<group>"; };
 		04EE8BDE2486AD5E00E683D7 /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
+		04EE8BE0248765D100E683D7 /* PhotoCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoCollectionViewCell.swift; sourceTree = "<group>"; };
+		04EE8BE22487673400E683D7 /* Astronomy Picture of the Day-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Astronomy Picture of the Day-Bridging-Header.h"; sourceTree = "<group>"; };
+		04EE8BE32487673500E683D7 /* FGTPhoto.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FGTPhoto.h; sourceTree = "<group>"; };
+		04EE8BE42487673500E683D7 /* FGTPhoto.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FGTPhoto.m; sourceTree = "<group>"; };
+		04EE8BE724877A5100E683D7 /* FGTNetworkFetch.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FGTNetworkFetch.h; sourceTree = "<group>"; };
+		04EE8BE824877A5100E683D7 /* FGTNetworkFetch.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FGTNetworkFetch.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -63,6 +72,9 @@
 			children = (
 				04EE8BD924868F2800E683D7 /* View Controller */,
 				04EE8BDA24868F3600E683D7 /* Storyboards */,
+				04EE8BE62487673D00E683D7 /* Model */,
+				04EE8BE22487673400E683D7 /* Astronomy Picture of the Day-Bridging-Header.h */,
+				04EE8BEA24877A5A00E683D7 /* Model Controller */,
 			);
 			path = "Astronomy Picture of the Day";
 			sourceTree = "<group>";
@@ -73,6 +85,7 @@
 				04EE8BC924868EAB00E683D7 /* ViewController.swift */,
 				04EE8BDC2486AD3400E683D7 /* AstronomyCollectionViewController.swift */,
 				04EE8BDE2486AD5E00E683D7 /* DetailViewController.swift */,
+				04EE8BE0248765D100E683D7 /* PhotoCollectionViewCell.swift */,
 			);
 			path = "View Controller";
 			sourceTree = "<group>";
@@ -95,6 +108,24 @@
 				04EE8BC724868EAB00E683D7 /* SceneDelegate.swift */,
 			);
 			path = Resources;
+			sourceTree = "<group>";
+		};
+		04EE8BE62487673D00E683D7 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				04EE8BE32487673500E683D7 /* FGTPhoto.h */,
+				04EE8BE42487673500E683D7 /* FGTPhoto.m */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		04EE8BEA24877A5A00E683D7 /* Model Controller */ = {
+			isa = PBXGroup;
+			children = (
+				04EE8BE724877A5100E683D7 /* FGTNetworkFetch.h */,
+				04EE8BE824877A5100E683D7 /* FGTNetworkFetch.m */,
+			);
+			path = "Model Controller";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -129,6 +160,7 @@
 				TargetAttributes = {
 					04EE8BC124868EAB00E683D7 = {
 						CreatedOnToolsVersion = 11.5;
+						LastSwiftMigration = 1150;
 					};
 				};
 			};
@@ -169,10 +201,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				04EE8BCA24868EAB00E683D7 /* ViewController.swift in Sources */,
+				04EE8BE924877A5100E683D7 /* FGTNetworkFetch.m in Sources */,
+				04EE8BE52487673500E683D7 /* FGTPhoto.m in Sources */,
 				04EE8BDD2486AD3500E683D7 /* AstronomyCollectionViewController.swift in Sources */,
 				04EE8BDF2486AD5E00E683D7 /* DetailViewController.swift in Sources */,
 				04EE8BC624868EAB00E683D7 /* AppDelegate.swift in Sources */,
 				04EE8BC824868EAB00E683D7 /* SceneDelegate.swift in Sources */,
+				04EE8BE1248765D100E683D7 /* PhotoCollectionViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -316,6 +351,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = N3P8URX7UV;
 				INFOPLIST_FILE = "$(SRCROOT)/Resources/Info.plist";
@@ -325,6 +361,8 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "com.productions.fritzgt.Astronomy-Picture-of-the-Day";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "Astronomy Picture of the Day/Astronomy Picture of the Day-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -334,6 +372,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = N3P8URX7UV;
 				INFOPLIST_FILE = "$(SRCROOT)/Resources/Info.plist";
@@ -343,6 +382,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "com.productions.fritzgt.Astronomy-Picture-of-the-Day";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "Astronomy Picture of the Day/Astronomy Picture of the Day-Bridging-Header.h";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
