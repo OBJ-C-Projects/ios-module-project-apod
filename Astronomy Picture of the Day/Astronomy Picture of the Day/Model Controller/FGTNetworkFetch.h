@@ -13,8 +13,8 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface FGTNetworkFetch : NSObject
 
-- (void)fetchPhotos:(NSString *)month completion:(void(^)(NSArray<FGTPhoto *> *photos, NSError *error))completion;
-
+- (void)fetchPhotos:(NSString *)month completion:(void(^)(FGTPhoto *photos, NSError *error))completion;
+    
 
 @end
 

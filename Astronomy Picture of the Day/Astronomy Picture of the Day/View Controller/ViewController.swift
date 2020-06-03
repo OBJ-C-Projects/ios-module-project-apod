@@ -19,7 +19,8 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
         fetch.fetchPhotos("June") { (data, error) in
-            print("Fetched!")
+            
+            print("Data: \(data.url)")
         }
       
     }

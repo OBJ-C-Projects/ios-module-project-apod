@@ -7,10 +7,11 @@
 //
 
 #import "FGTNetworkFetch.h"
+#import "FGTPhoto.h"
 
 @implementation FGTNetworkFetch
 
-- (void)fetchPhotos:(NSString *)month completion:(void(^)(NSArray<FGTPhoto *> *photos, NSError *error))completion{
+- (void)fetchPhotos:(NSString *)month completion:(void(^)(FGTPhoto *photo, NSError *error))completion{
     
     
     //1.Built URL
@@ -31,6 +32,7 @@
         
         if(error){
             NSLog(@"Error: %@", error);
+            completion(nil,error);
             return;
         }
         
@@ -41,6 +43,22 @@
         
         
         NSLog(@"Fetching completed");
+        
+        //3.Handle data
+        NSError *parsingError;
+        NSDictionary *photoJSON = [NSJSONSerialization JSONObjectWithData:data options:0 error:&parsingError];
+        
+        if(parsingError){
+            NSLog(@"Parsing error: %@", parsingError);
+            completion(nil,parsingError);
+            return;
+        }
+        
+        FGTPhoto *photo = [[FGTPhoto alloc] initWithDictionary:photoJSON];
+        
+        NSLog(@"json: %@", photoJSON);
+        
+        completion(photo,nil);
         
     }]resume];
     
