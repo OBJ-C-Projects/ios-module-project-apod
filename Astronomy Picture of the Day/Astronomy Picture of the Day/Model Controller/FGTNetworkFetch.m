@@ -11,7 +11,7 @@
 
 @implementation FGTNetworkFetch
 
-- (void)fetchPhotos:(NSString *)month completion:(void(^)(FGTPhoto *photo, NSError *error))completion{
+- (void)fetchPhotos:(NSString *)date completion:(void(^)(FGTPhoto *photo, NSError *error))completion{
     
     
     //1.Built URL
@@ -21,11 +21,15 @@
     
     //Query items
     NSURLQueryItem *key = [NSURLQueryItem queryItemWithName:@"api_key" value:keyString];
+    
+    //NSURLQueryItem *photoDate = [NSURLQueryItem queryItemWithName:@"date" value:date];//Not in use to set default as today
+    
+    //Add to array of query items
     components.queryItems = @[key];
     
     NSURL *url = components.URL;
     
-    NSLog(@"URL: %@", url);
+    //NSLog(@"URL: %@", url);
     
     //2.Create Data Session
     [[NSURLSession.sharedSession dataTaskWithURL: url completionHandler:^(NSData * _Nullable data, NSURLResponse * _Nullable response, NSError * _Nullable error) {
@@ -42,7 +46,7 @@
         }
         
         
-        NSLog(@"Fetching completed");
+        //NSLog(@"Fetching completed");
         
         //3.Handle data
         NSError *parsingError;
@@ -56,7 +60,7 @@
         
         FGTPhoto *photo = [[FGTPhoto alloc] initWithDictionary:photoJSON];
         
-        NSLog(@"json: %@", photoJSON);
+        //NSLog(@"json: %@", photoJSON);
         
         completion(photo,nil);
         

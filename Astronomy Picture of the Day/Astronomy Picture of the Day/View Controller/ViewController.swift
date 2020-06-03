@@ -10,18 +10,11 @@ import UIKit
 
 class ViewController: UIViewController {
     
-    private var fetch = FGTNetworkFetch()
-    
     
     @IBOutlet weak var checkoutButtonLabel: UIButton!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
-        fetch.fetchPhotos("June") { (data, error) in
-            
-            print("Data: \(data.url)")
-        }
       
     }
 

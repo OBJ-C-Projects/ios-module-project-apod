@@ -4,7 +4,6 @@
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
-        <capability name="collection view cell content view" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -57,7 +56,7 @@
                                     <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
                                 </state>
                                 <connections>
-                                    <segue destination="Vpx-lw-7WR" kind="show" id="JuC-9c-X7u"/>
+                                    <segue destination="gqK-iI-nFE" kind="show" id="svr-Cg-LYV"/>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Daily Astronomy" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ejo-lE-Q3k">
@@ -88,57 +87,6 @@
             </objects>
             <point key="canvasLocation" x="1047.8260869565217" y="138.61607142857142"/>
         </scene>
-        <!--Month-->
-        <scene sceneID="Slh-DZ-Jca">
-            <objects>
-                <collectionViewController id="Vpx-lw-7WR" customClass="AstronomyCollectionViewController" customModule="Astronomy_Picture_of_the_Day" customModuleProvider="target" sceneMemberID="viewController">
-                    <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" id="Rc9-Ed-hyy">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
-                        <collectionViewFlowLayout key="collectionViewLayout" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="HJ1-8b-UIm">
-                            <size key="itemSize" width="188" height="190"/>
-                            <size key="headerReferenceSize" width="0.0" height="0.0"/>
-                            <size key="footerReferenceSize" width="0.0" height="0.0"/>
-                            <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
-                        </collectionViewFlowLayout>
-                        <cells>
-                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="PhotoCell" id="SMS-3u-Jnj" customClass="PhotoCollectionViewCell" customModule="Astronomy_Picture_of_the_Day" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="0.0" width="188" height="190"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="TiY-jg-fsw">
-                                    <rect key="frame" x="0.0" y="0.0" width="188" height="190"/>
-                                    <autoresizingMask key="autoresizingMask"/>
-                                    <subviews>
-                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="planet" translatesAutoresizingMaskIntoConstraints="NO" id="Pnu-tQ-KJV">
-                                            <rect key="frame" x="0.0" y="0.0" width="188" height="190"/>
-                                        </imageView>
-                                    </subviews>
-                                    <constraints>
-                                        <constraint firstAttribute="trailing" secondItem="Pnu-tQ-KJV" secondAttribute="trailing" id="AGP-8U-7Kc"/>
-                                        <constraint firstAttribute="bottom" secondItem="Pnu-tQ-KJV" secondAttribute="bottom" id="JHV-p8-2ms"/>
-                                        <constraint firstItem="Pnu-tQ-KJV" firstAttribute="leading" secondItem="TiY-jg-fsw" secondAttribute="leading" id="Uzi-O2-Tjk"/>
-                                        <constraint firstItem="Pnu-tQ-KJV" firstAttribute="top" secondItem="TiY-jg-fsw" secondAttribute="top" id="qxc-44-iZj"/>
-                                    </constraints>
-                                </collectionViewCellContentView>
-                                <size key="customSize" width="188" height="190"/>
-                                <connections>
-                                    <outlet property="imageView" destination="Pnu-tQ-KJV" id="HVS-iU-kGn"/>
-                                    <segue destination="gqK-iI-nFE" kind="show" id="9Va-9G-rKa"/>
-                                </connections>
-                            </collectionViewCell>
-                        </cells>
-                        <connections>
-                            <outlet property="dataSource" destination="Vpx-lw-7WR" id="bkS-lq-haj"/>
-                            <outlet property="delegate" destination="Vpx-lw-7WR" id="wbv-Mb-a2e"/>
-                        </connections>
-                    </collectionView>
-                    <navigationItem key="navigationItem" title="Month" id="37x-7d-mep"/>
-                </collectionViewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="f8z-dO-Itc" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="1890" y="139"/>
-        </scene>
         <!--Title-->
         <scene sceneID="K8x-YR-l9M">
             <objects>
@@ -147,15 +95,21 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="planet" translatesAutoresizingMaskIntoConstraints="NO" id="sSl-lE-eiD">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="sSl-lE-eiD">
                                 <rect key="frame" x="0.0" y="88" width="414" height="808"/>
                             </imageView>
+                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="large" translatesAutoresizingMaskIntoConstraints="NO" id="lpT-6D-Y62">
+                                <rect key="frame" x="188.5" y="429.5" width="37" height="37"/>
+                                <color key="color" cocoaTouchSystemColor="darkTextColor"/>
+                            </activityIndicatorView>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
+                            <constraint firstItem="lpT-6D-Y62" firstAttribute="centerX" secondItem="aDv-xX-Lwe" secondAttribute="centerX" id="BlY-QZ-0yE"/>
                             <constraint firstItem="sSl-lE-eiD" firstAttribute="leading" secondItem="zR1-Mi-HaK" secondAttribute="leading" id="Cas-ra-cML"/>
                             <constraint firstAttribute="bottom" secondItem="sSl-lE-eiD" secondAttribute="bottom" id="FQW-8h-aEV"/>
                             <constraint firstItem="sSl-lE-eiD" firstAttribute="trailing" secondItem="zR1-Mi-HaK" secondAttribute="trailing" id="pyO-56-Fg2"/>
+                            <constraint firstItem="lpT-6D-Y62" firstAttribute="centerY" secondItem="aDv-xX-Lwe" secondAttribute="centerY" id="sry-QF-AfA"/>
                             <constraint firstItem="sSl-lE-eiD" firstAttribute="top" secondItem="zR1-Mi-HaK" secondAttribute="top" id="wKi-vc-K7o"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="zR1-Mi-HaK"/>
@@ -163,10 +117,14 @@
                     <navigationItem key="navigationItem" title="Title" id="Xuc-bd-BIh">
                         <barButtonItem key="rightBarButtonItem" id="epk-cU-jbb"/>
                     </navigationItem>
+                    <connections>
+                        <outlet property="imageView" destination="sSl-lE-eiD" id="oWR-JE-UPw"/>
+                        <outlet property="loader" destination="lpT-6D-Y62" id="i1M-Ph-Vbq"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="2BK-So-Oqa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2700" y="138.61607142857142"/>
+            <point key="canvasLocation" x="1982.608695652174" y="138.61607142857142"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="gEL-mh-NgI">
@@ -188,7 +146,6 @@
         </scene>
     </scenes>
     <resources>
-        <image name="planet" width="188" height="173"/>
         <image name="splash-screen" width="375" height="508"/>
     </resources>
 </document>
