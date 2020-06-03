@@ -7,12 +7,14 @@
 //
 
 #import <Foundation/Foundation.h>
+@class FGTPhoto;
 
 NS_ASSUME_NONNULL_BEGIN
 
 @interface FGTNetworkFetch : NSObject
 
-- (void)fetchPhotos;
+- (void)fetchPhotos:(NSString *)month completion:(void(^)(NSArray<FGTPhoto *> *photos, NSError *error))completion;
+
 
 @end
 
